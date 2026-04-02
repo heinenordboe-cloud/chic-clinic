@@ -4,6 +4,68 @@
 
 ---
 
+## GIT-RUTINE PER KUNDE
+
+**Før du starter ny kunde**
+
+1. Kopier `tradematch-base-template` til ny mappe (bytt ut `kundenavn` med f.eks. `hansen-vvs`):
+
+   ```text
+   xcopy /E /I tradematch-base-template kundenavn
+   ```
+
+2. Opprett nytt GitHub-repo: [github.com/new](https://github.com/new) — navn: `kundenavn` (f.eks. `hansen-vvs`).
+
+3. I den nye mappen (slett evt. medkopiert `.git` fra malen først, så du får et rent repo):
+
+   ```text
+   cd kundenavn
+   git init
+   git branch -M main
+   git add .
+   git commit -m "feat: initiell oppsett [kundenavn]"
+   git remote add origin https://github.com/heinenordboe-cloud/kundenavn.git
+   git push -u origin main
+   ```
+
+**Etter hver arbeidsøkt — alltid lagre til GitHub**
+
+```text
+git add .
+git commit -m "feat: [beskriv endring]"
+git push origin main
+npx vercel --prod
+```
+
+Aldri jobb kun lokalt — push til GitHub etter hver økt. Hvis PC krasjer og koden ikke er pushet, er arbeid tapt.
+
+---
+
+## REPO-STRUKTUR
+
+GitHub: **heinenordboe-cloud**
+
+- `tradematch-base-template` — mal; **aldri rediger direkte** (kopier til ny kundemappe)
+- `tradematch` — tradematch.no salgsnettside
+- `chic-clinic` — Ragnhild, Elgvegen 11
+- `[kundenavn]` — ny repo per kunde
+
+---
+
+## NY PC / NY MASKIN
+
+For å gjenopprette alt på ny PC:
+
+1. Installer: Node.js, Git, Cursor, Vercel CLI
+2. `git clone https://github.com/heinenordboe-cloud/tradematch-base-template`
+3. `git clone https://github.com/heinenordboe-cloud/chic-clinic`
+4. `npm install` i hver mappe der det trengs
+5. `npx vercel login`
+
+Da er miljøet tilbake på omtrent ti minutter.
+
+---
+
 ## STEG 1 — FINN LEAD (10 min)
 
 - Outscraper → `"[bransje] Trondheim Norway"`
@@ -23,7 +85,8 @@
 
 ## STEG 3 — CURSOR BYGGER (15–30 min)
 
-- Åpne `tradematch-base-template` i Cursor
+- For **ny kunde**: jobb i kundens mappe (kopi fra malen), ikke direkte i `tradematch-base-template` — se **GIT-RUTINE PER KUNDE** over.
+- Åpne kundemappen i Cursor
 - Ctrl+L → lim inn prompt
 - Sjekk `localhost:3000` på mobil (375px i DevTools)
 - `npm run build` → **0 feil**
@@ -32,6 +95,7 @@
 
 ## STEG 4 — DEPLOY (2 min)
 
+- Commit og push til GitHub (se **GIT-RUTINE PER KUNDE**)
 - **`npx vercel --prod`** (aldri GitHub-integrasjon som primær deploy)
 - Kopier live URL
 - Logg URL i CRM
