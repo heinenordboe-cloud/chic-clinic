@@ -41,8 +41,8 @@ export function Gallery() {
                 src={items[1].src}
                 alt={items[1].alt}
                 fill
-                className="object-cover grayscale transition duration-700 hover:grayscale-0"
-                style={{ objectPosition: "center top" }}
+                className="object-cover transition duration-700 hover:scale-[1.02]"
+                style={{ objectPosition: "center 35%" }}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 420px"
               />
             </div>

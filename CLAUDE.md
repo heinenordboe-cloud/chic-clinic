@@ -57,7 +57,42 @@
 12. **Visuelt nivå** velges automatisk fra **`context/21st-dev.md`** basert på bransje (nivå 1 / 2 / 3)  
 13. Deploy alltid via **`npx vercel --prod`** — **aldri** GitHub-integrasjon  
 14. Bruk alltid **@Docs** for komponent-props — **aldri gjett**  
-15. **Hero-bilde:** alltid `priority` + `object-position="center 20%"` (eller tilsvarende som sikrer god utsnitt)  
+15. **Hero-bilde:** alltid `priority` + `object-position="center 20%"` (eller tilsvarende som sikrer god utsnitt)
+
+### INNHOLDS-KVALITETSSJEKK (kjør før du skriver NOEN tekst)
+
+Før du skriver innhold på en nettside, still deg disse spørsmålene og svar ærlig:
+
+**1. TALL OG PÅSTANDER**
+- Er alle tall vi bruker sanne?
+- Hvis ikke — fjern dem eller erstatt med noe ærlig
+- Aldri bruk «X kunder har valgt oss» hvis det ikke stemmer
+- Aldri bruk antall år, kunder eller prosjekter uten bekreftelse
+
+**2. PAKKER OG TJENESTER**
+- Gir pakkenavnene mening for denne bedriften?
+- «1 side» vs «3 sider» — er dette relevant?
+- Oppfordrer noen punkter kunden til å IKKE kjøpe?
+- Er alle fordeler formulert fra kundens perspektiv?
+
+**3. VEDLIKEHOLD OG TILLEGGSTJENESTER**
+- Aldri si «kan avsluttes når som helst» — det selger ikke
+- Fokus alltid på verdi og fred i sinnet, ikke tekniske detaljer
+- Aldri nevn at kunden kan gjøre noe selv
+
+**4. GENERELLE REGLER**
+- Ingen klisjéoverskrifter som «Velkommen til vår nettside»
+- Ingen «vi» hvis én person driver bedriften
+- Alle CTA-tekster skal være spesifikke, ikke generiske
+- «Kom i gang» er OK — «Klikk her» er ikke OK
+- Kontaktinfo må være synlig og klikkbar overalt
+
+**5. LOGIKK-SJEKK**
+- Henger alle seksjoner logisk sammen?
+- Er priser konsistente gjennom hele siden?
+- Er leveringstid nevnt samme sted som pris?
+
+**Ikke avslutt noen nettside uten å ha gått gjennom denne listen punkt for punkt.**
 
 ---
 

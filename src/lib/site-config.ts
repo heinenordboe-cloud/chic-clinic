@@ -57,8 +57,8 @@ export const siteConfig = {
         alt: "Hårstyling og blow-dry hos Chic Clinic i Trondheim",
       },
       {
-        src: "/images/chic-bryllup-1.jpeg.jpeg",
-        alt: "Bryllupsfrisyre i sort-hvitt — Chic Clinic Trondheim",
+        src: "/images/chic-gallery-salong.jpeg",
+        alt: "Farge og styling i salongen hos Chic Clinic i Trondheim",
       },
       {
         src: "/images/chic-bryllup-2.jpeg.jpeg",
