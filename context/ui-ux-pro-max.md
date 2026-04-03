@@ -1,12 +1,12 @@
-# 🖥️ ui-ux-pro-max.md — Tradematch UX-regler
+# 🖥️ ui-ux-pro-max.md — UX-retningslinjer
 
-> Profesjonelle UX-prinsipper for nettsider vi bygger for norske småbedrifter. En vakker nettside som ikke konverterer er verdiløs — denne filen sørger for at vi bygger begge deler.
+> Profesjonelle UX-prinsipper for denne nettsiden. En vakker side som ikke konverterer er lite verdt — denne filen minner om både uttrykk og funksjon.
 
 ---
 
-## 🎯 Hovedmål for hver kundeside
+## 🎯 Hovedmål for nettsiden
 
-Hver nettside vi bygger har **ett primært mål:** at besøkende tar kontakt med bedriften.
+Siden har **ett primært mål:** at besøkende tar kontakt med Chic Clinic.
 
 Alt annet er sekundært.
 

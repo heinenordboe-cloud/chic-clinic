@@ -1,7 +1,7 @@
 # 🧩 21st-dev.md — Komponentstil per bransje
 
 > Brukes av Cursor for å velge riktig visuell stil basert på kundens bransje.
-> Målet er at ingen to Tradematch-nettsider skal se like ut.
+> Målet er at denne nettsiden beholder egenart og ikke ser ut som en generisk mal.
 
 ---
 

@@ -1,14 +1,14 @@
-# 🔍 seo.md — Tradematch SEO-regler
+# 🔍 seo.md — lokal SEO (Chic Clinic)
 
-> Lokalt SEO for norske småbedrifter i Trondheim. Målet er at bedriften dukker opp når folk søker etter tjenesten deres på Google.
+> Lokalt SEO for Chic Clinic i Trondheim. Målet er at bedriften dukker opp når folk søker etter relevante tjenester på Google.
 
 ---
 
 ## 🎯 Fokus: Lokal SEO
 
-Kundene våre trenger ikke å rangere globalt — de trenger å dukke opp når folk i Trondheim søker. Det er enklere og mer verdifullt.
+Chic Clinic trenger ikke å rangere globalt — målet er å dukke opp når folk i Trondheim (og nærområdet) søker etter relevante tjenester. Det er enklere og ofte mer verdifullt.
 
-**Eksempelsøk vi optimaliserer for:**
+**Eksempelsøk det er naturlig å optimalisere mot:**
 - "rørlegger Trondheim"
 - "elektriker Trondheim pris"
 - "snekker Trondheim erfaring"

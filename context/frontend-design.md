@@ -1,6 +1,6 @@
-# 🎨 frontend-design.md — Tradematch Designregler
+# 🎨 frontend-design.md — designretningslinjer
 
-> Bruk denne filen for å lage særpregede, produksjonsklare nettsider som unngår generisk AI-estetikk. Les alltid denne før du designer en ny kundeside.
+> Bruk denne filen for å lage særpregede, produksjonsklare nettsider som unngår generisk AI-estetikk. Les før du gjør større designendringer på Chic Clinic.
 
 ---
 
@@ -100,4 +100,4 @@ Skap atmosfære fremfor flate farger. Bruk:
 - [ ] BentoGrid for tjenester
 - [ ] Fungerer på mobil (responsive)
 - [ ] All tekst på profesjonell norsk bokmål
-- [ ] Kontaktinfo synlig: +47 940 32 243 / post.tradematch@gmail.com
+- [ ] Kontaktinfo synlig: +47 950 23 434 / post@chicclinic.no (jfr. `site-config.ts`)
