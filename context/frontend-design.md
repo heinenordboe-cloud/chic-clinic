@@ -62,6 +62,45 @@ Før du skriver en eneste linje kode, bestem deg for én tydelig estetisk retnin
 
 ---
 
+## Animasjon og 3D
+
+### Vurderingsregler
+
+Før du bruker 3D eller avansert scrolling, gjør alltid denne vurderingen automatisk.
+
+**Bransjevurdering**
+
+- Restaurant / café / frisør / luksus → kan bruke mer (Chic Clinic: denne kategorien)
+- Rørlegger / elektriker / snekker → minimal animasjon
+- Andre bransjer: vurder «mer» vs. «minimal» ut fra merkevare, bildemengde og målgruppe
+
+**Hastighetsvurdering**
+
+- Three.js / Spline 3D → kun hvis siden ikke har mange bilder (kombinasjon blir fort tung)
+- GSAP ScrollTrigger → OK for alle, relativt lett bibliotek
+- Framer Motion → OK for alle, lett bibliotek
+- Spline embed → maks én per side, ikke på mobil
+
+**SEO-vurdering**
+
+- Animasjoner påvirker ikke SEO direkte
+- Treg lastetid påvirker derimot SEO (Core Web Vitals)
+- Regel: siden skal oppleves lastet innen omtrent **3 sekunder** med animasjon inkludert
+- Sjekk alltid: `npm run build` og bundle-størrelse / First Load JS
+
+**Konklusjon per prosjekt**
+
+Skriv alltid hvilken løsning du velger og hvorfor, f.eks.: «Bruker GSAP ScrollTrigger fordi bransjen er restaurant og siden er lett nok. Unngår Three.js fordi det ville gjort siden for tung med eksisterende bilder.»
+
+**Tilgjengelige biblioteker** (installer ved behov)
+
+- `npm install gsap`
+- `npm install framer-motion`
+- `npm install @splinetool/react-spline`
+- Three.js finnes ofte via Magic UI / tilhørende mønstre — vurder bundle før du legger til mer 3D oppå det
+
+---
+
 ## 📐 Layout & Komposisjon
 
 - Unngå forutsigbare layouts — bruk asymmetri og overlapp der det passer
