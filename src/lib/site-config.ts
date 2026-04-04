@@ -49,11 +49,11 @@ export const siteConfig = {
   },
 
   images: {
-    hero: "/images/chic-hero.jpeg.jpeg",
-    owner: "/images/chic-eier.jpeg.jpeg",
+    hero: "/images/chic-hero.jpeg",
+    owner: "/images/chic-eier.jpeg",
     gallery: [
       {
-        src: "/images/chic-styling.jpeg.jpeg",
+        src: "/images/chic-styling.jpeg",
         alt: "Hårstyling og blow-dry hos Chic Clinic i Trondheim",
       },
       {
@@ -61,7 +61,7 @@ export const siteConfig = {
         alt: "Farge og styling i salongen hos Chic Clinic i Trondheim",
       },
       {
-        src: "/images/chic-bryllup-2.jpeg.jpeg",
+        src: "/images/chic-bryllup-2.jpeg",
         alt: "Elegant bryllupslook — frisør og skjønnhet i Trondheim",
       },
     ],
