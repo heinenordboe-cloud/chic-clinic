@@ -35,9 +35,6 @@ export const siteConfig = {
   shortName: "CHIC",
   established: "2017",
 
-  /** Offisiell logo (PNG) — brukes kun i hero. */
-  brandLogoSrc: "/images/chic-logo.png",
-
   url: "https://chicclinic.no",
 
   tagline: "Din skjønnhet, min lidenskap",
@@ -141,11 +138,12 @@ export const siteConfig = {
       imageAlt: "Gold-produkter",
     },
     {
-      title: "AP Whitening (AP24)",
-      description: "Tannbleking — spør i salongen.",
+      title: "AP24 tannkrem",
+      description:
+        "Whitening-tannkrem fra Nu Skin (AP24) — spør i salongen for veiledning.",
       price: "200,-",
       imageSrc: "/images/chic-clinic/product-ap24.svg",
-      imageAlt: "AP Whitening AP24",
+      imageAlt: "AP24 tannkrem",
     },
     {
       title: "Amika styling",

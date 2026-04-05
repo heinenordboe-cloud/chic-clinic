@@ -8,11 +8,6 @@
     --foreground: 222.2 84% 4.9%;
     --border: 214.3 31.8% 91.4%;
     --radius: 0.5rem;
-    /**
-     * Finjustering: horisontal strek i «H» i logoen mot skjøtet hero → tjenester.
-     * Positive px flytter logoen nedover (inn mot neste seksjon), negative flytter opp.
-     */
-    --chic-hero-logo-h-nudge: 0px;
   }
 
   .dark {

@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import {
@@ -37,13 +36,7 @@ export function Navbar() {
         className="relative mx-auto flex h-[4.5rem] max-w-6xl items-center gap-3 px-4"
         aria-label="Hovednavigasjon"
       >
-        <div className="flex min-w-0 flex-1 items-center gap-4 lg:gap-6">
-          <Link
-            href="/"
-            className="shrink-0 font-display text-base font-semibold tracking-tight text-stone-900 transition hover:text-gold-800 sm:text-lg"
-          >
-            {siteConfig.name}
-          </Link>
+        <div className="flex min-w-0 flex-1 items-center gap-4 lg:gap-5">
           <div className="hidden items-center gap-5 lg:flex">
             {links.slice(0, 4).map((link) => (
               <a
