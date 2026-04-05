@@ -14,13 +14,13 @@ export function Gallery() {
       <div className="mx-auto max-w-6xl px-4">
         <BlurFade inView inViewMargin="-80px" delay={0}>
           <div className="mb-6 text-center">
-            <h2 className="font-display text-3xl font-semibold text-stone-900 sm:text-4xl">
+            <h2 className="text-balance font-display text-3xl font-semibold text-stone-900 sm:text-4xl">
               Galleri
             </h2>
           </div>
         </BlurFade>
         <BlurFade inView inViewMargin="-80px" delay={0.25}>
-          <p className="mx-auto mb-14 max-w-xl text-center font-body text-stone-600">
+          <p className="mx-auto mb-14 max-w-xl text-balance text-center font-body text-stone-600">
             Et glimt av stemningen hos meg — styling, bryllup og hverdagsglede.
             Følg gjerne på Instagram for ferske bilder.
           </p>
@@ -61,17 +61,16 @@ export function Gallery() {
               href={siteConfig.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex min-h-[200px] flex-col items-center justify-center gap-3 rounded-2xl border border-dashed border-gold-400/40 bg-gradient-to-br from-stone-50 to-gold-50/30 p-8 text-center shadow-sm transition hover:border-gold-500/50 hover:shadow-md md:col-span-2"
+              className="group relative flex min-h-[200px] flex-col items-center justify-center gap-3 rounded-2xl border border-gold-400/35 bg-gradient-to-br from-stone-50 to-gold-50/20 p-8 text-center shadow-sm transition hover:border-gold-500/45 hover:shadow-md md:col-span-2"
             >
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-400/15 text-gold-700 transition group-hover:bg-gold-400/25">
                 <Instagram className="h-7 w-7" aria-hidden />
               </div>
               <p className="font-display text-lg font-semibold text-stone-900">
-                Se mer på Instagram
+                Følg Chic Clinic på Instagram
               </p>
-              <p className="max-w-md font-body text-sm text-stone-600">
-                Lenken er en plassholder — bytt til riktig profil når URL-en er
-                klar. {siteConfig.social.instagramHandle}
+              <p className="max-w-md text-balance font-body text-sm text-stone-600">
+                {siteConfig.social.instagramHandle} · instagram.com/chicclinicas
               </p>
             </a>
           </div>

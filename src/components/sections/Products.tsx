@@ -13,13 +13,13 @@ export function Products() {
       <div className="mx-auto max-w-6xl px-4">
         <BlurFade inView inViewMargin="-80px" delay={0}>
           <div className="mb-6 text-center">
-            <h2 className="font-display text-3xl font-semibold text-stone-900 sm:text-4xl">
+            <h2 className="text-balance font-display text-3xl font-semibold text-stone-900 sm:text-4xl">
               Produkter
             </h2>
           </div>
         </BlurFade>
         <BlurFade inView inViewMargin="-80px" delay={0.25}>
-          <p className="mx-auto mb-14 max-w-xl text-center font-body text-stone-600">
+          <p className="mx-auto mb-14 max-w-xl text-balance text-center font-body text-stone-600">
             Et utvalg du kan kjøpe med hjem — spør gjerne i salongen for anbefaling
             til ditt hår og din stil.
           </p>
@@ -34,15 +34,17 @@ export function Products() {
               delay={0.35 + i * 0.15}
             >
               <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-stone-200/90 bg-white shadow-sm ring-1 ring-stone-100">
-                <div className="relative aspect-square bg-stone-100">
-                  <Image
-                    src={p.imageSrc}
-                    alt={p.imageAlt}
-                    fill
-                    className="object-cover object-center"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px"
-                    unoptimized={p.imageSrc.endsWith(".svg")}
-                  />
+                <div className="relative flex min-h-[200px] items-center justify-center bg-stone-100 p-6 sm:min-h-[240px]">
+                  <div className="relative h-48 w-full sm:h-56">
+                    <Image
+                      src={p.imageSrc}
+                      alt={p.imageAlt}
+                      fill
+                      className="object-contain object-center"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px"
+                      unoptimized
+                    />
+                  </div>
                 </div>
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="font-display text-xl font-semibold text-stone-900">
@@ -51,7 +53,7 @@ export function Products() {
                   <p className="mt-2 font-display text-lg font-semibold tabular-nums text-gold-600">
                     {p.price}
                   </p>
-                  <p className="mt-3 flex-1 font-body text-sm leading-relaxed text-stone-600">
+                  <p className="mt-3 flex-1 text-pretty font-body text-sm leading-relaxed text-stone-600">
                     {p.description}
                   </p>
                 </div>

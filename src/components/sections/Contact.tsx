@@ -15,13 +15,13 @@ export function Contact() {
       <div className="mx-auto max-w-6xl px-4">
         <BlurFade inView inViewMargin="-80px" delay={0}>
           <div className="mb-6 text-center">
-            <h2 className="font-display text-3xl font-semibold text-stone-900 sm:text-4xl">
+            <h2 className="text-balance font-display text-3xl font-semibold text-stone-900 sm:text-4xl">
               Kontakt
             </h2>
           </div>
         </BlurFade>
         <BlurFade inView inViewMargin="-80px" delay={0.25}>
-          <p className="mx-auto mb-14 max-w-xl text-center font-body text-stone-600">
+          <p className="mx-auto mb-14 max-w-xl text-balance text-center font-body text-stone-600">
             Send meg en melding via skjemaet, ring, eller book når det passer
             deg.
           </p>
@@ -57,7 +57,7 @@ export function Contact() {
                   </h3>
                   <a
                     href={`tel:${phoneTel}`}
-                    className="mt-1 inline-block font-body text-gold-800 underline-offset-4 hover:underline"
+                    className="mt-1 inline-block whitespace-nowrap font-body text-gold-800 underline-offset-4 hover:underline"
                   >
                     {phoneDisplay}
                   </a>
@@ -76,10 +76,13 @@ export function Contact() {
                     href="https://maps.google.com/?q=Elgvegen+11,+7021+Trondheim"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-1 inline-block font-body text-stone-600 underline-offset-4 hover:text-gold-800 hover:underline"
+                    className="mt-1 inline-block text-balance font-body text-stone-600 underline-offset-4 hover:text-gold-800 hover:underline"
                   >
                     {siteConfig.address.singleLine}
                   </a>
+                  <p className="mt-2 font-body text-sm text-stone-500">
+                    {siteConfig.address.parkingNote}
+                  </p>
                 </div>
               </div>
             </div>
@@ -90,7 +93,7 @@ export function Contact() {
                 <h3 className="font-display text-2xl font-semibold">
                   Book time
                 </h3>
-                <p className="mt-3 font-body text-sm leading-relaxed text-stone-300">
+                <p className="mt-3 text-balance font-body text-sm leading-relaxed text-stone-300">
                   Se ledige timer og velg behandling i Timma.
                 </p>
                 <Button
@@ -108,7 +111,7 @@ export function Contact() {
                 </Button>
                 <a
                   href={`tel:${phoneTel}`}
-                  className="mt-6 text-sm font-medium text-gold-200/95 underline-offset-4 hover:text-white hover:underline"
+                  className="mt-6 whitespace-nowrap text-sm font-medium text-gold-200/95 underline-offset-4 hover:text-white hover:underline"
                 >
                   {phoneDisplay}
                 </a>

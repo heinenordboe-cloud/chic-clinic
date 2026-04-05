@@ -5,6 +5,7 @@ import { Award, Sparkles } from "lucide-react";
 
 export function Certifications() {
   const { elleebana, microneedling } = siteConfig.certifications;
+  const extra = siteConfig.qualificationBoxes;
 
   return (
     <section
@@ -14,13 +15,13 @@ export function Certifications() {
       <div className="mx-auto max-w-6xl px-4">
         <BlurFade inView inViewMargin="-80px" delay={0}>
           <div className="mb-6 text-center">
-            <h2 className="font-display text-3xl font-semibold text-stone-900 sm:text-4xl">
+            <h2 className="text-balance font-display text-3xl font-semibold text-stone-900 sm:text-4xl">
               Sertifiseringer og kompetanse
             </h2>
           </div>
         </BlurFade>
         <BlurFade inView inViewMargin="-80px" delay={0.25}>
-          <p className="mx-auto mb-14 max-w-xl text-center font-body text-stone-600">
+          <p className="mx-auto mb-14 max-w-xl text-balance text-center font-body text-stone-600">
             Trygghet for deg som kunde — jeg investerer i opplæring og anerkjente
             metoder.
           </p>
@@ -44,7 +45,7 @@ export function Certifications() {
                 <p className="mt-1 font-display text-lg text-gold-800">
                   {elleebana.subtitle}
                 </p>
-                <p className="mt-4 flex-1 font-body text-sm leading-relaxed text-stone-600">
+                <p className="mt-4 flex-1 text-pretty font-body text-sm leading-relaxed text-stone-600">
                   {elleebana.description}
                 </p>
               </article>
@@ -59,11 +60,31 @@ export function Certifications() {
               <h3 className="font-display text-xl font-semibold text-stone-900">
                 {microneedling.title}
               </h3>
-              <p className="mt-4 flex-1 font-body text-sm leading-relaxed text-stone-600">
+              <p className="mt-4 flex-1 text-pretty font-body text-sm leading-relaxed text-stone-600">
                 {microneedling.description}
               </p>
             </article>
           </BlurFade>
+        </div>
+
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {extra.map((box, i) => (
+            <BlurFade
+              key={box.title}
+              inView
+              inViewMargin="-40px"
+              delay={0.2 + i * 0.1}
+            >
+              <article className="flex h-full flex-col rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+                <h3 className="font-display text-lg font-semibold text-stone-900">
+                  {box.title}
+                </h3>
+                <p className="mt-3 text-pretty font-body text-sm leading-relaxed text-stone-600">
+                  {box.body}
+                </p>
+              </article>
+            </BlurFade>
+          ))}
         </div>
       </div>
     </section>

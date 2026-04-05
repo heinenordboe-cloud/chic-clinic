@@ -51,7 +51,9 @@ const jsonLd = {
     "@type": "Person",
     name: siteConfig.owner.fullName,
   },
-  sameAs: [siteConfig.social.instagram, siteConfig.social.facebook],
+  sameAs: [siteConfig.social.instagram, siteConfig.social.facebook].filter(
+    (u) => typeof u === "string" && u.trim().length > 0
+  ),
 };
 
 export default function RootLayout({

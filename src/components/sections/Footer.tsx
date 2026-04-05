@@ -4,6 +4,7 @@ import { Facebook, Instagram } from "lucide-react";
 
 export function Footer() {
   const { phoneDisplay, phoneTel } = siteConfig;
+  const facebookUrl = siteConfig.social.facebook?.trim();
 
   return (
     <footer className="border-t border-stone-200 bg-white py-12">
@@ -27,12 +28,15 @@ export function Footer() {
           </div>
 
           <div className="flex flex-col gap-3 sm:items-end">
-            <p className="font-body text-sm text-stone-600 sm:text-right">
+            <p className="text-balance font-body text-sm text-stone-600 sm:text-right">
               {siteConfig.address.singleLine}
+            </p>
+            <p className="font-body text-xs text-stone-500 sm:text-right">
+              {siteConfig.address.parkingNote}
             </p>
             <a
               href={`tel:${phoneTel}`}
-              className="font-body text-sm font-medium text-stone-800 hover:text-gold-800 hover:underline sm:text-right"
+              className="whitespace-nowrap font-body text-sm font-medium text-stone-800 hover:text-gold-800 hover:underline sm:text-right"
             >
               {phoneDisplay}
             </a>
@@ -42,7 +46,7 @@ export function Footer() {
             >
               {siteConfig.email}
             </a>
-            <div className="flex items-center justify-center gap-3 sm:justify-end">
+            <div className="flex flex-wrap items-center justify-center gap-3 sm:justify-end">
               <a
                 href={siteConfig.social.instagram}
                 target="_blank"
@@ -52,15 +56,17 @@ export function Footer() {
                 <Instagram className="h-4 w-4" aria-hidden />
                 {siteConfig.social.instagramHandle}
               </a>
-              <a
-                href={siteConfig.social.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-stone-200 px-3 py-1.5 font-body text-sm text-stone-600 transition hover:border-gold-300 hover:text-gold-700"
-              >
-                <Facebook className="h-4 w-4" aria-hidden />
-                {siteConfig.social.facebookLabel}
-              </a>
+              {facebookUrl ? (
+                <a
+                  href={facebookUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-stone-200 px-3 py-1.5 font-body text-sm text-stone-600 transition hover:border-gold-300 hover:text-gold-700"
+                >
+                  <Facebook className="h-4 w-4" aria-hidden />
+                  {siteConfig.social.facebookLabel}
+                </a>
+              ) : null}
             </div>
             <a
               href={siteConfig.url}

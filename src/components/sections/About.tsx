@@ -27,13 +27,13 @@ export function About() {
 
           <BlurFade inView inViewMargin="-80px" delay={0.25}>
             <div>
-              <h2 className="font-display text-3xl font-semibold text-stone-900 sm:text-4xl">
+              <h2 className="text-balance font-display text-3xl font-semibold text-stone-900 sm:text-4xl">
                 {about.title}
               </h2>
-              <p className="mt-5 font-body text-lg font-medium text-stone-800">
+              <p className="mt-5 text-balance font-body text-lg font-medium text-stone-800">
                 {about.lead}
               </p>
-              <p className="mt-6 font-body leading-relaxed text-stone-600">
+              <p className="mt-6 text-pretty font-body leading-relaxed text-stone-600">
                 {about.body}
               </p>
               <p className="mt-8 font-display text-sm uppercase tracking-[0.2em] text-gold-700">
