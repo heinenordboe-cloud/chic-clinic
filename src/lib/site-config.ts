@@ -130,8 +130,8 @@ export const siteConfig = {
   ] satisfies ServiceItem[],
 
   /**
-   * Bilder i public/images/chic-clinic/ — bruk disse filnavnene (web-sikre, uten mellomrom):
-   * amika-perk-up.jpg · ap-whitening.jpg · four-reasons-texture-spray.jpg
+   * Bilder i public/images/chic-clinic/ — filnavn må matche nøyaktig (mellomrom OK).
+   * Products.tsx bruker encodeURI() på stien.
    */
   products: [
     {
@@ -139,7 +139,7 @@ export const siteConfig = {
       description:
         "Frisk opp håret mellom vask — spør i salongen for tips til bruk.",
       price: "329,-",
-      imageSrc: "/images/chic-clinic/amika-perk-up.jpg",
+      imageSrc: "/images/chic-clinic/Amika perk up.jpg",
       imageAlt: "Amika Perk Up",
     },
     {
@@ -147,14 +147,14 @@ export const siteConfig = {
       description:
         "Whitening-produkt (AP) — spør i salongen for veiledning.",
       price: "200,-",
-      imageSrc: "/images/chic-clinic/ap-whitening.jpg",
+      imageSrc: "/images/chic-clinic/Ap whitening.jpg",
       imageAlt: "AP Whitening",
     },
     {
       title: "Four Reasons Texture Spray",
       description: "Gir tekstur og grep — spør i salongen.",
       price: "319,-",
-      imageSrc: "/images/chic-clinic/four-reasons-texture-spray.jpg",
+      imageSrc: "/images/chic-clinic/Four reasons texture spray.jpg",
       imageAlt: "Four Reasons Texture Spray",
     },
   ] satisfies ProductItem[],

@@ -36,7 +36,7 @@ export function Products() {
               <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-stone-200/90 bg-white shadow-sm ring-1 ring-stone-100">
                 <div className="relative flex min-h-[220px] items-center justify-center bg-stone-100 p-8 sm:min-h-[260px]">
                   <Image
-                    src={p.imageSrc}
+                    src={encodeURI(p.imageSrc)}
                     alt={p.imageAlt}
                     width={400}
                     height={400}
