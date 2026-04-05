@@ -21,8 +21,8 @@ export function Reviews() {
         </BlurFade>
         <BlurFade inView inViewMargin="-80px" delay={0.25}>
           <p className="mx-auto mb-14 max-w-xl text-center font-body text-stone-600">
-            Jeg er takknemlig for hver tilbakemelding. Her vises plassholdere til
-            ekte anmeldelser er klare.
+            Her vises tre utvalgte omtaler fra Facebook. Tekstene oppdateres når
+            du limer inn de endelige sitatene.
           </p>
         </BlurFade>
 
@@ -42,7 +42,7 @@ export function Reviews() {
                   {Array.from({ length: review.rating }).map((_, j) => (
                     <Star
                       key={j}
-                      className="h-4 w-4 fill-amber-500 text-amber-500"
+                      className="h-4 w-4 fill-gold-500 text-gold-500"
                       aria-hidden
                     />
                   ))}
@@ -56,7 +56,7 @@ export function Reviews() {
                   </p>
                   <p className="text-xs text-stone-500">{review.role}</p>
                   {review.placeholder ? (
-                    <p className="mt-2 text-xs font-medium uppercase tracking-wide text-amber-700">
+                    <p className="mt-2 text-xs font-medium uppercase tracking-wide text-gold-700">
                       Plassholder
                     </p>
                   ) : null}
@@ -65,6 +65,12 @@ export function Reviews() {
             </BlurFade>
           ))}
         </div>
+
+        <BlurFade inView inViewMargin="-40px" delay={0.85}>
+          <p className="mx-auto mt-14 max-w-2xl text-center font-body text-sm leading-relaxed text-stone-600">
+            {siteConfig.reviewsClosing}
+          </p>
+        </BlurFade>
       </div>
     </section>
   );

@@ -16,7 +16,7 @@ export function About() {
             <div className="relative mx-auto aspect-[3/4] max-w-md overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-stone-200/80 lg:mx-0">
               <Image
                 src={siteConfig.images.owner}
-                alt={`${owner.firstName}, eier av Chic Clinic AS i Trondheim — portrett`}
+                alt={`${owner.fullName}, eier av Chic Clinic AS i Trondheim — portrett`}
                 fill
                 className="object-cover"
                 style={{ objectPosition: "center top" }}
@@ -36,8 +36,8 @@ export function About() {
               <p className="mt-6 font-body leading-relaxed text-stone-600">
                 {about.body}
               </p>
-              <p className="mt-8 font-display text-sm uppercase tracking-[0.2em] text-amber-700">
-                {owner.firstName} · Chic Clinic · Est. {siteConfig.established}
+              <p className="mt-8 font-display text-sm uppercase tracking-[0.2em] text-gold-700">
+                {owner.fullName} · Chic Clinic · Est. {siteConfig.established}
               </p>
             </div>
           </BlurFade>

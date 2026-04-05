@@ -35,4 +35,4 @@ export function FieldGroup({
 
 /** Origin UI–inspirerte feltegenskaper (matcher shadcn Input, tettere visuelt uttrykk). */
 export const originFieldClass =
-  "flex h-12 w-full rounded-lg border border-stone-200/90 bg-white px-3.5 py-2 text-base text-stone-900 shadow-sm outline-none transition-[color,box-shadow,border-color] placeholder:text-stone-400 focus-visible:border-amber-600/45 focus-visible:ring-[3px] focus-visible:ring-amber-500/15 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm";
+  "flex h-12 w-full rounded-lg border border-stone-200/90 bg-white px-3.5 py-2 text-base text-stone-900 shadow-sm outline-none transition-[color,box-shadow,border-color] placeholder:text-stone-400 focus-visible:border-gold-600/45 focus-visible:ring-[3px] focus-visible:ring-gold-500/15 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm";

@@ -47,6 +47,11 @@ const jsonLd = {
   url: siteConfig.url,
   description: siteConfig.description,
   foundingDate: "2017-07-07",
+  founder: {
+    "@type": "Person",
+    name: siteConfig.owner.fullName,
+  },
+  sameAs: [siteConfig.social.instagram, siteConfig.social.facebook],
 };
 
 export default function RootLayout({

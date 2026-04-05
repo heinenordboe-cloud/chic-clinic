@@ -7,12 +7,22 @@ export type ServiceItem = {
   description: string;
   price: string | null;
   priceNote?: string;
+  /** Vises som egen linje under beskrivelsen (f.eks. sertifisering). */
+  certification?: string;
+};
+
+export type ProductItem = {
+  title: string;
+  description: string;
+  price: string;
+  imageSrc: string;
+  imageAlt: string;
 };
 
 export const siteConfig = {
   name: "Chic Clinic AS",
   shortName: "CHIC",
-  established: "07.07.17",
+  established: "2017",
 
   /** Offisiell logo (PNG med høyest oppløsning blant leverte varianter) */
   brandLogoSrc: "/images/chic-logo.png",
@@ -22,7 +32,7 @@ export const siteConfig = {
   tagline: "Din skjønnhet, min lidenskap",
 
   description:
-    "Frisør og skjønnhet i Trondheim. Klipp, styling, vippeløft, microblading og microneedling — book time hos meg på Chic Clinic.",
+    "Frisør og skjønnhet i Trondheim hos Ragnhild Katrine — intim hjemmesalong med gratis parkering. Klipp, styling, vippeløft, microblading og microneedling. Book time på Timma.",
 
   email: "post@chicclinic.no",
 
@@ -41,10 +51,12 @@ export const siteConfig = {
 
   owner: {
     firstName: "Ragnhild",
+    fullName: "Ragnhild Katrine",
   },
 
   booking: {
-    timmaUrl: "https://timma.no/salong/chic-clinic-as",
+    timmaUrl:
+      "https://timma.no/salong/chic-clinic-as-removed-1585771537139-removed-1696322966728",
     label: "Book time",
   },
 
@@ -72,44 +84,69 @@ export const siteConfig = {
       title: "Microneedling",
       description:
         "Profesjonell hudbehandling med fokus på glød og fornyelse. Kampanjepris inkluderer hjemmeserum.",
-      price: "1 790 kr",
-      priceNote: "Kampanje · inkl. hjemmeserum",
+      price: "1 790,-",
+      priceNote: "Kampanje · inkl. hjemmeserum · tidsbegrenset til juni",
     },
     {
       title: "Microblading",
       description:
         "Naturlige, vakre bryn med varig resultat. Utføres av sertifisert behandler.",
-      price: "3 490 kr",
-      priceNote: "Refill 2 490 kr",
+      price: "3 490,-",
+      priceNote: "Refill 2 490,-",
+      certification:
+        "Behandlingen utføres av sertifisert utøver med dokumentert opplæring i microblading.",
     },
     {
-      title: "Maskinklipp",
-      description: "Presist og effektivt — moderne teknikk tilpasset deg.",
-      price: "590 kr",
-    },
-    {
-      title: "Fasongklipp",
-      description: "Klassisk fasong som rammer ansiktet og holder seg fin mellom besøk.",
-      price: "690 kr",
-    },
-    {
-      title: "Barneklipp",
-      description: "Rolig stemning og trygg hånd — for de minste.",
-      price: "490 kr",
+      title: "Vippeløft",
+      description:
+        "Løft som åpner blikket — inkludert farge for et friskt, holdbart uttrykk.",
+      price: "890,-",
     },
     {
       title: "Brynstyling",
-      description: "Form og finish som løfter blikket.",
-      price: "690 kr",
+      description: "Voks, form og farge — tilpasset ansiktet ditt.",
+      price: "490–690,-",
+      priceNote: "Fra · avhengig av behandling",
     },
     {
-      title: "Vippeløft og brynstyling",
+      title: "Farge",
       description:
-        "Løft som varer — kombineres med bryn for et helhetlig uttrykk. Ta kontakt for pris.",
-      price: null,
-      priceNote: "Pris etter avtale",
+        "Farging og teknikker tilpasset hår og stil — vi avtaler omfang i salongen.",
+      price: "790–2 500,-",
+      priceNote: "Fra · etter konsultasjon",
+    },
+    {
+      title: "Klipp",
+      description:
+        "Klassisk klipp og form — alltid med dialog og trygg hånd.",
+      price: "690–1 090,-",
+      priceNote: "Fra · etter konsultasjon",
     },
   ] satisfies ServiceItem[],
+
+  products: [
+    {
+      title: "Gold-produkter",
+      description: "Utvalgte pleieprodukter — spør i salongen.",
+      price: "319,-",
+      imageSrc: "/images/chic-clinic/product-gold.svg",
+      imageAlt: "Plassholder — Gold-produkter",
+    },
+    {
+      title: "AP Whitening (AP24)",
+      description: "Tannbleking — referansebilde image_6.png (byttes når klart).",
+      price: "200,-",
+      imageSrc: "/images/chic-clinic/product-ap24.svg",
+      imageAlt: "Plassholder — AP Whitening AP24",
+    },
+    {
+      title: "Amika styling",
+      description: "Stylingprodukter — referansebilde image_5.png (byttes når klart).",
+      price: "329,-",
+      imageSrc: "/images/chic-clinic/product-amika.svg",
+      imageAlt: "Plassholder — Amika styling",
+    },
+  ] satisfies ProductItem[],
 
   certifications: {
     elleebana: {
@@ -128,45 +165,50 @@ export const siteConfig = {
   about: {
     title: "Om meg",
     lead:
-      "Jeg heter Ragnhild og har drevet Chic Clinic alene siden 2017. For meg har salongen alltid vært et sted der du skal kunne senke skuldrene og bli sett.",
-    body: "Jeg tror på håndverk, detaljer og dialog. Når du kommer til meg for klipp, bryn, vippeløft eller hudbehandling, er det meg du møter — fra første hilsen til siste finish. Jeg brenner for faget og for at du skal gå herfra med en følelse av velvære. Velkommen til meg i Trondheim.",
+      "Jeg heter Ragnhild Katrine og har drevet Chic Clinic som en liten, intim hjemmesalon i Trondheim siden 2017 — med gratis parkering rett ved.",
+    body: "Frisør siden 2000, lærlingetid på Hannes Frisører i Trondheim og Agathon på Kolvereid. Kursing i fargeteknikker i blant annet Wella og Cutrin. Brudefrisering GHD. Klippekurs hos blant annet Dag Gustavsen og ved Alf Fjeld. Ragnhild Katrine er også sertifisert i Elleebana One Shot Lash Lift. For meg handler det om håndverk, ro og at du skal bli sett — fra første hilsen til siste finish.",
   },
 
   reviews: [
     {
-      name: "Kunde",
+      name: "Facebook-kunde",
       role: "Plassholder",
       rating: 5,
-      text: "Her kommer en ekte anmeldelse når den er klar. Jeg er stolt av tilbakemeldingene kundene mine gir meg.",
+      text: "Plassholder for første Facebook-omtale — tekst limes inn når den er klar.",
       placeholder: true,
     },
     {
-      name: "Kunde",
+      name: "Facebook-kunde",
       role: "Plassholder",
       rating: 5,
-      text: "Del gjerne din opplevelse på Google eller Timma — det hjelper andre å finne meg.",
+      text: "Plassholder for andre Facebook-omtale — tekst limes inn når den er klar.",
       placeholder: true,
     },
     {
-      name: "Kunde",
+      name: "Facebook-kunde",
       role: "Plassholder",
       rating: 5,
-      text: "Takk for at du besøker meg. Jeg gleder meg til å høre fra deg etter neste time.",
+      text: "Plassholder for tredje Facebook-omtale — tekst limes inn når den er klar.",
       placeholder: true,
     },
   ],
 
+  reviewsClosing:
+    "For meg betyr hver tilbakemelding enormt mye. Er du fornøyd? Si det til alle. Er du misfornøyd? Si det til meg🙏",
+
   social: {
     instagram: "https://www.instagram.com/",
     instagramHandle: "@chicclinic",
+    facebook: "https://www.facebook.com/",
+    facebookLabel: "Facebook",
   },
 
   seo: {
     title: "Frisør og skjønnhet i Trondheim | Chic Clinic AS",
     description:
-      "Chic Clinic AS i Trondheim — klipp, styling, microblading, microneedling og vippeløft. Book time via Timma eller send meg en e-post.",
+      "Chic Clinic AS i Trondheim — Ragnhild Katrine. Intim hjemmesalong med gratis parkering. Klipp, styling, microblading, microneedling og vippeløft. Book time via Timma.",
     keywords:
-      "frisør Trondheim, skjønnhetssalong Trondheim, microblading Trondheim, microneedling Trondheim, Chic Clinic",
+      "frisør Trondheim, skjønnhetssalong Trondheim, microblading Trondheim, microneedling Trondheim, Chic Clinic, Ragnhild Katrine",
   },
 
   footerCopyright: "© 2026 Chic Clinic AS",

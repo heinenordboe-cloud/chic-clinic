@@ -12,10 +12,11 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { siteConfig } from "@/lib/site-config";
-import { Menu } from "lucide-react";
+import { Facebook, Instagram, Menu } from "lucide-react";
 
 const links = [
   { href: "#tjenester", label: "Tjenester" },
+  { href: "#produkter", label: "Produkter" },
   { href: "#book-time", label: "Book time" },
   { href: "#sertifiseringer", label: "Sertifiseringer" },
   { href: "#om-oss", label: "Om oss" },
@@ -23,6 +24,8 @@ const links = [
   { href: "#anmeldelser", label: "Kundeomtaler" },
   { href: "#kontakt", label: "Kontakt" },
 ];
+
+const navHover = "transition hover:text-gold-700";
 
 export function Navbar() {
   const { phoneDisplay, phoneTel } = siteConfig;
@@ -33,12 +36,12 @@ export function Navbar() {
         className="relative mx-auto flex h-[4.5rem] max-w-6xl items-center px-4"
         aria-label="Hovednavigasjon"
       >
-        <div className="hidden flex-1 items-center gap-8 md:flex">
-          {links.slice(0, 3).map((link) => (
+        <div className="hidden flex-1 items-center gap-6 lg:flex">
+          {links.slice(0, 4).map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-stone-600 transition hover:text-amber-700"
+              className={cn("text-sm font-medium text-stone-600", navHover)}
             >
               {link.label}
             </a>
@@ -49,13 +52,34 @@ export function Navbar() {
           <ChicLogo className="inline-flex justify-center" />
         </div>
 
-        <div className="flex flex-1 items-center justify-end gap-2 sm:gap-3">
-          <div className="hidden items-center gap-6 md:flex">
-            {links.slice(3).map((link) => (
+        <div className="flex flex-1 items-center justify-end gap-1 sm:gap-2">
+          <div className="mr-1 hidden items-center gap-1 md:flex">
+            <a
+              href={siteConfig.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full p-2 text-stone-500 transition hover:bg-stone-100 hover:text-gold-700"
+              aria-label={`Instagram ${siteConfig.social.instagramHandle}`}
+            >
+              <Instagram className="h-4 w-4" aria-hidden />
+            </a>
+            <a
+              href={siteConfig.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full p-2 text-stone-500 transition hover:bg-stone-100 hover:text-gold-700"
+              aria-label={siteConfig.social.facebookLabel}
+            >
+              <Facebook className="h-4 w-4" aria-hidden />
+            </a>
+          </div>
+
+          <div className="hidden items-center gap-4 lg:flex">
+            {links.slice(4).map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-stone-600 transition hover:text-amber-700"
+                className={cn("text-sm font-medium text-stone-600", navHover)}
               >
                 {link.label}
               </a>
@@ -63,7 +87,7 @@ export function Navbar() {
           </div>
           <a
             href={`tel:${phoneTel}`}
-            className="hidden text-sm font-medium text-stone-700 transition hover:text-amber-800 md:inline-block"
+            className="hidden text-sm font-medium text-stone-700 transition hover:text-gold-800 xl:inline-block"
           >
             {phoneDisplay}
           </a>
@@ -82,7 +106,7 @@ export function Navbar() {
               <Button
                 variant="outline"
                 size="icon"
-                className="md:hidden"
+                className="lg:hidden"
                 aria-label="Åpne meny"
               >
                 <Menu className="h-5 w-5" />
@@ -104,11 +128,35 @@ export function Navbar() {
                   </SheetClose>
                 ))}
               </div>
+              <div className="mt-6 flex items-center justify-center gap-4 border-t border-stone-100 pt-6">
+                <SheetClose asChild>
+                  <a
+                    href={siteConfig.social.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full p-3 text-stone-600 hover:bg-stone-100 hover:text-gold-700"
+                    aria-label="Instagram"
+                  >
+                    <Instagram className="h-5 w-5" />
+                  </a>
+                </SheetClose>
+                <SheetClose asChild>
+                  <a
+                    href={siteConfig.social.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full p-3 text-stone-600 hover:bg-stone-100 hover:text-gold-700"
+                    aria-label="Facebook"
+                  >
+                    <Facebook className="h-5 w-5" />
+                  </a>
+                </SheetClose>
+              </div>
               <div className="mt-auto flex flex-col gap-3 border-t border-stone-100 pt-6">
                 <SheetClose asChild>
                   <a
                     href={`tel:${phoneTel}`}
-                    className="text-center text-base font-semibold text-amber-800 hover:underline"
+                    className="text-center text-base font-semibold text-gold-800 hover:underline"
                   >
                     {phoneDisplay}
                   </a>
@@ -116,7 +164,7 @@ export function Navbar() {
                 <SheetClose asChild>
                   <a
                     href={`mailto:${siteConfig.email}`}
-                    className="text-center text-sm font-medium text-stone-700 hover:text-amber-800 hover:underline"
+                    className="text-center text-sm font-medium text-stone-700 hover:text-gold-800 hover:underline"
                   >
                     {siteConfig.email}
                   </a>

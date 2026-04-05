@@ -24,7 +24,7 @@ export function BackgroundGradient({
     >
       <span
         className={cn(
-          "absolute inset-[-100%] bg-[conic-gradient(from_90deg_at_50%_50%,#D97706_0%,#f5f0e8_40%,#c4b5a0_60%,#D97706_100%)] opacity-40",
+          "absolute inset-[-100%] bg-[conic-gradient(from_90deg_at_50%_50%,#D4AF37_0%,#f5f0e8_40%,#c4b5a0_60%,#D4AF37_100%)] opacity-40",
           animate && "motion-safe:animate-[spin_8s_linear_infinite]"
         )}
         aria-hidden

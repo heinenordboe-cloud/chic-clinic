@@ -20,7 +20,7 @@ export function HeroSpotlight() {
   const smoothX = useSpring(mouseX, { stiffness: 90, damping: 28, mass: 0.4 });
   const smoothY = useSpring(mouseY, { stiffness: 90, damping: 28, mass: 0.4 });
 
-  const background = useMotionTemplate`radial-gradient(520px circle at ${smoothX}% ${smoothY}%, rgba(251, 191, 36, 0.22), rgba(251, 191, 36, 0.06) 35%, transparent 65%)`;
+  const background = useMotionTemplate`radial-gradient(520px circle at ${smoothX}% ${smoothY}%, rgba(212, 175, 55, 0.22), rgba(212, 175, 55, 0.06) 35%, transparent 65%)`;
 
   useEffect(() => {
     const onMove = (e: PointerEvent) => {
@@ -57,7 +57,7 @@ export function HeroSpotlight() {
         aria-hidden
       />
       <div
-        className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-amber-400/[0.04]"
+        className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-gold-400/[0.04]"
         aria-hidden
       />
     </div>

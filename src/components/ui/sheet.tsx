@@ -40,7 +40,7 @@ const SheetContent = React.forwardRef<
       {...props}
     >
       {children}
-      <SheetPrimitive.Close className="absolute right-4 top-4 rounded-full p-2 text-stone-500 transition hover:bg-stone-100 hover:text-stone-900 focus:outline-none focus:ring-2 focus:ring-amber-600">
+      <SheetPrimitive.Close className="absolute right-4 top-4 rounded-full p-2 text-stone-500 transition hover:bg-stone-100 hover:text-stone-900 focus:outline-none focus:ring-2 focus:ring-gold-600">
         <X className="h-5 w-5" aria-hidden />
         <span className="sr-only">Lukk</span>
       </SheetPrimitive.Close>

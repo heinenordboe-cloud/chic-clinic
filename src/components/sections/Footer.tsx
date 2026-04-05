@@ -1,6 +1,6 @@
 import { BlurFade } from "@/components/magic-ui/blur-fade";
 import { siteConfig } from "@/lib/site-config";
-import { Instagram } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 
 export function Footer() {
   const { phoneDisplay, phoneTel } = siteConfig;
@@ -19,41 +19,52 @@ export function Footer() {
               {siteConfig.name}
             </p>
             <p className="mt-2 font-body text-sm text-stone-500">
-              Est. {siteConfig.established}
+              {siteConfig.owner.fullName} · Est. {siteConfig.established}
             </p>
             <p className="mt-1 font-body text-sm text-stone-500">
               {siteConfig.footerCopyright}
             </p>
           </div>
 
-          <div className="flex flex-col gap-2 sm:items-end">
+          <div className="flex flex-col gap-3 sm:items-end">
             <p className="font-body text-sm text-stone-600 sm:text-right">
               {siteConfig.address.singleLine}
             </p>
             <a
               href={`tel:${phoneTel}`}
-              className="font-body text-sm font-medium text-stone-800 hover:text-amber-800 hover:underline"
+              className="font-body text-sm font-medium text-stone-800 hover:text-gold-800 hover:underline sm:text-right"
             >
               {phoneDisplay}
             </a>
             <a
               href={`mailto:${siteConfig.email}`}
-              className="font-body text-sm text-amber-800 hover:underline"
+              className="font-body text-sm text-gold-800 hover:underline sm:text-right"
             >
               {siteConfig.email}
             </a>
-            <a
-              href={siteConfig.social.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 font-body text-sm text-stone-600 transition hover:text-amber-700 sm:justify-end"
-            >
-              <Instagram className="h-4 w-4" aria-hidden />
-              Instagram {siteConfig.social.instagramHandle}
-            </a>
+            <div className="flex items-center justify-center gap-3 sm:justify-end">
+              <a
+                href={siteConfig.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-stone-200 px-3 py-1.5 font-body text-sm text-stone-600 transition hover:border-gold-300 hover:text-gold-700"
+              >
+                <Instagram className="h-4 w-4" aria-hidden />
+                {siteConfig.social.instagramHandle}
+              </a>
+              <a
+                href={siteConfig.social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-stone-200 px-3 py-1.5 font-body text-sm text-stone-600 transition hover:border-gold-300 hover:text-gold-700"
+              >
+                <Facebook className="h-4 w-4" aria-hidden />
+                {siteConfig.social.facebookLabel}
+              </a>
+            </div>
             <a
               href={siteConfig.url}
-              className="font-body text-sm text-stone-500 hover:text-stone-800"
+              className="font-body text-sm text-stone-500 hover:text-stone-800 sm:text-right"
             >
               chicclinic.no
             </a>

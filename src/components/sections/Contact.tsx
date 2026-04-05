@@ -31,7 +31,7 @@ export function Contact() {
           <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-2">
             <div className="space-y-8 rounded-2xl border border-stone-200 bg-stone-50/50 p-8">
               <div className="flex items-start gap-4">
-                <div className="rounded-xl bg-amber-600/10 p-3 text-amber-700">
+                <div className="rounded-xl bg-gold-600/10 p-3 text-gold-700">
                   <Mail className="h-5 w-5" aria-hidden />
                 </div>
                 <div>
@@ -40,7 +40,7 @@ export function Contact() {
                   </h3>
                   <a
                     href={`mailto:${siteConfig.email}`}
-                    className="mt-1 inline-block font-body text-amber-800 underline-offset-4 hover:underline"
+                    className="mt-1 inline-block font-body text-gold-800 underline-offset-4 hover:underline"
                   >
                     {siteConfig.email}
                   </a>
@@ -48,7 +48,7 @@ export function Contact() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="rounded-xl bg-amber-600/10 p-3 text-amber-700">
+                <div className="rounded-xl bg-gold-600/10 p-3 text-gold-700">
                   <Phone className="h-5 w-5" aria-hidden />
                 </div>
                 <div>
@@ -57,7 +57,7 @@ export function Contact() {
                   </h3>
                   <a
                     href={`tel:${phoneTel}`}
-                    className="mt-1 inline-block font-body text-amber-800 underline-offset-4 hover:underline"
+                    className="mt-1 inline-block font-body text-gold-800 underline-offset-4 hover:underline"
                   >
                     {phoneDisplay}
                   </a>
@@ -76,7 +76,7 @@ export function Contact() {
                     href="https://maps.google.com/?q=Elgvegen+11,+7021+Trondheim"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-1 inline-block font-body text-stone-600 underline-offset-4 hover:text-amber-800 hover:underline"
+                    className="mt-1 inline-block font-body text-stone-600 underline-offset-4 hover:text-gold-800 hover:underline"
                   >
                     {siteConfig.address.singleLine}
                   </a>
@@ -96,7 +96,7 @@ export function Contact() {
                 <Button
                   asChild
                   size="lg"
-                  className="mt-8 bg-amber-600 hover:bg-amber-500"
+                  className="mt-8 bg-gold-600 hover:bg-gold-500"
                 >
                   <a
                     href={siteConfig.booking.timmaUrl}
@@ -108,7 +108,7 @@ export function Contact() {
                 </Button>
                 <a
                   href={`tel:${phoneTel}`}
-                  className="mt-6 text-sm font-medium text-amber-200/95 underline-offset-4 hover:text-white hover:underline"
+                  className="mt-6 text-sm font-medium text-gold-200/95 underline-offset-4 hover:text-white hover:underline"
                 >
                   {phoneDisplay}
                 </a>

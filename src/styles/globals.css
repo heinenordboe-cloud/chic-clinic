@@ -8,6 +8,11 @@
     --foreground: 222.2 84% 4.9%;
     --border: 214.3 31.8% 91.4%;
     --radius: 0.5rem;
+    /**
+     * Finjustering: horisontal strek i «H» i logoen skal treffe toppen av hero-bildet.
+     * Negative px løfter logoen opp (prøv -24px til -80px ved behov).
+     */
+    --chic-hero-logo-shift: -36px;
   }
 
   .dark {

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { BlurFade } from "@/components/magic-ui/blur-fade";
 import { siteConfig } from "@/lib/site-config";
+import { Instagram } from "lucide-react";
 
 export function Gallery() {
   const items = siteConfig.images.gallery;
@@ -21,6 +22,7 @@ export function Gallery() {
         <BlurFade inView inViewMargin="-80px" delay={0.25}>
           <p className="mx-auto mb-14 max-w-xl text-center font-body text-stone-600">
             Et glimt av stemningen hos meg — styling, bryllup og hverdagsglede.
+            Følg gjerne på Instagram for ferske bilder.
           </p>
         </BlurFade>
 
@@ -55,6 +57,23 @@ export function Gallery() {
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 420px"
               />
             </div>
+            <a
+              href={siteConfig.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex min-h-[200px] flex-col items-center justify-center gap-3 rounded-2xl border border-dashed border-gold-400/40 bg-gradient-to-br from-stone-50 to-gold-50/30 p-8 text-center shadow-sm transition hover:border-gold-500/50 hover:shadow-md md:col-span-2"
+            >
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-400/15 text-gold-700 transition group-hover:bg-gold-400/25">
+                <Instagram className="h-7 w-7" aria-hidden />
+              </div>
+              <p className="font-display text-lg font-semibold text-stone-900">
+                Se mer på Instagram
+              </p>
+              <p className="max-w-md font-body text-sm text-stone-600">
+                Lenken er en plassholder — bytt til riktig profil når URL-en er
+                klar. {siteConfig.social.instagramHandle}
+              </p>
+            </a>
           </div>
         </BlurFade>
       </div>

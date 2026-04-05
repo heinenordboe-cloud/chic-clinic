@@ -30,7 +30,7 @@ export function BentoGridItem({
   return (
     <div
       className={cn(
-        "group relative flex h-full min-h-[260px] flex-col overflow-hidden rounded-2xl border border-stone-200/80 bg-white p-6 shadow-sm transition duration-300 hover:border-amber-600/25 hover:shadow-md",
+        "group relative flex h-full min-h-[260px] flex-col overflow-hidden rounded-2xl border border-stone-200/80 bg-white p-6 shadow-sm transition duration-300 hover:border-gold-600/25 hover:shadow-md",
         className
       )}
       {...props}

@@ -34,14 +34,14 @@ export function Certifications() {
               className="rounded-[calc(1rem-1px)] p-8"
             >
               <article className="flex h-full flex-col">
-                <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-amber-600/40 bg-amber-50/50 px-4 py-2 text-sm font-semibold text-amber-800">
+                <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-gold-600/40 bg-gold-50/50 px-4 py-2 text-sm font-semibold text-gold-800">
                   <Award className="h-4 w-4 shrink-0" aria-hidden />
                   Tillitsbadge
                 </div>
                 <h3 className="font-display text-2xl font-semibold text-stone-900">
                   {elleebana.title}
                 </h3>
-                <p className="mt-1 font-display text-lg text-amber-800">
+                <p className="mt-1 font-display text-lg text-gold-800">
                   {elleebana.subtitle}
                 </p>
                 <p className="mt-4 flex-1 font-body text-sm leading-relaxed text-stone-600">
@@ -53,7 +53,7 @@ export function Certifications() {
 
           <BlurFade inView inViewMargin="-50px" delay={0.75}>
             <article className="flex h-full flex-col rounded-2xl border border-stone-200 bg-stone-50/50 p-8">
-              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-stone-900 text-amber-400">
+              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-stone-900 text-gold-400">
                 <Sparkles className="h-6 w-6" aria-hidden />
               </div>
               <h3 className="font-display text-xl font-semibold text-stone-900">

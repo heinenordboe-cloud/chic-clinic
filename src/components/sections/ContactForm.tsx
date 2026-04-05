@@ -136,7 +136,7 @@ export function ContactForm({ className }: { className?: string }) {
           <p className="text-sm text-stone-600" role="status">
             Hvis e-post ikke åpnet seg, send direkte til{" "}
             <a
-              className="font-medium text-amber-800 underline-offset-2 hover:underline"
+              className="font-medium text-gold-800 underline-offset-2 hover:underline"
               href={`mailto:${siteConfig.email}`}
             >
               {siteConfig.email}
