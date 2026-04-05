@@ -130,31 +130,32 @@ export const siteConfig = {
   ] satisfies ServiceItem[],
 
   /**
-   * Produktbilder: legg JPG/WEBP/PNG i public/images/chic-clinic/ med eksakt filnavn.
-   * (SVG hadde ugyldig tegn og feilet i noen nettlesere; JPG er mest stabilt på Vercel.)
+   * Bilder i public/images/chic-clinic/ — bruk disse filnavnene (web-sikre, uten mellomrom):
+   * amika-perk-up.jpg · ap-whitening.jpg · four-reasons-texture-spray.jpg
    */
   products: [
     {
-      title: "Gold-produkter",
-      description: "Utvalgte pleieprodukter — spør i salongen.",
-      price: "319,-",
-      imageSrc: "/images/chic-clinic/product-gold.jpg",
-      imageAlt: "Gold-produkter",
-    },
-    {
-      title: "AP24 tannkrem",
+      title: "Amika Perk Up",
       description:
-        "Whitening-tannkrem fra Nu Skin (AP24) — spør i salongen for veiledning.",
-      price: "200,-",
-      imageSrc: "/images/chic-clinic/product-ap24.jpg",
-      imageAlt: "AP24 tannkrem",
+        "Frisk opp håret mellom vask — spør i salongen for tips til bruk.",
+      price: "329,-",
+      imageSrc: "/images/chic-clinic/amika-perk-up.jpg",
+      imageAlt: "Amika Perk Up",
     },
     {
-      title: "Amika styling",
-      description: "Stylingprodukter — spør i salongen.",
-      price: "329,-",
-      imageSrc: "/images/chic-clinic/product-amika.jpg",
-      imageAlt: "Amika styling",
+      title: "AP Whitening",
+      description:
+        "Whitening-produkt (AP) — spør i salongen for veiledning.",
+      price: "200,-",
+      imageSrc: "/images/chic-clinic/ap-whitening.jpg",
+      imageAlt: "AP Whitening",
+    },
+    {
+      title: "Four Reasons Texture Spray",
+      description: "Gir tekstur og grep — spør i salongen.",
+      price: "319,-",
+      imageSrc: "/images/chic-clinic/four-reasons-texture-spray.jpg",
+      imageAlt: "Four Reasons Texture Spray",
     },
   ] satisfies ProductItem[],
 
