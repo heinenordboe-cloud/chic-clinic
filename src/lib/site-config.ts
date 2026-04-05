@@ -129,12 +129,16 @@ export const siteConfig = {
     },
   ] satisfies ServiceItem[],
 
+  /**
+   * Produktbilder: legg JPG/WEBP/PNG i public/images/chic-clinic/ med eksakt filnavn.
+   * (SVG hadde ugyldig tegn og feilet i noen nettlesere; JPG er mest stabilt på Vercel.)
+   */
   products: [
     {
       title: "Gold-produkter",
       description: "Utvalgte pleieprodukter — spør i salongen.",
       price: "319,-",
-      imageSrc: "/images/chic-clinic/product-gold.svg",
+      imageSrc: "/images/chic-clinic/product-gold.jpg",
       imageAlt: "Gold-produkter",
     },
     {
@@ -142,14 +146,14 @@ export const siteConfig = {
       description:
         "Whitening-tannkrem fra Nu Skin (AP24) — spør i salongen for veiledning.",
       price: "200,-",
-      imageSrc: "/images/chic-clinic/product-ap24.svg",
+      imageSrc: "/images/chic-clinic/product-ap24.jpg",
       imageAlt: "AP24 tannkrem",
     },
     {
       title: "Amika styling",
       description: "Stylingprodukter — spør i salongen.",
       price: "329,-",
-      imageSrc: "/images/chic-clinic/product-amika.svg",
+      imageSrc: "/images/chic-clinic/product-amika.jpg",
       imageAlt: "Amika styling",
     },
   ] satisfies ProductItem[],

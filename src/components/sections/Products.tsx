@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { BlurFade } from "@/components/magic-ui/blur-fade";
 import { siteConfig } from "@/lib/site-config";
 
@@ -33,16 +34,14 @@ export function Products() {
               delay={0.35 + i * 0.15}
             >
               <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-stone-200/90 bg-white shadow-sm ring-1 ring-stone-100">
-                <div className="flex min-h-[220px] items-center justify-center bg-stone-100 p-8 sm:min-h-[260px]">
-                  {/* eslint-disable-next-line @next/next/no-img-element -- SVG i public; next/image er upålitelig for disse i produksjon */}
-                  <img
+                <div className="relative flex min-h-[220px] items-center justify-center bg-stone-100 p-8 sm:min-h-[260px]">
+                  <Image
                     src={p.imageSrc}
                     alt={p.imageAlt}
-                    width={320}
-                    height={320}
-                    className="max-h-52 w-auto max-w-full object-contain"
-                    loading="lazy"
-                    decoding="async"
+                    width={400}
+                    height={400}
+                    className="h-52 w-auto max-w-full object-contain"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 280px"
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-6">
